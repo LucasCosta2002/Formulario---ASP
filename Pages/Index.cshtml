@@ -1,0 +1,40 @@
+﻿@page
+@model Formulario.Pages.IndexModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TP - ASP</title>
+    <script src="~/js/site.js"></script>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div>
+        <p>Número de usuarios que visitaron la pagina: @Model.UserCount</p>
+        <p>Número de veces que se recargo la página: @Model.PageReloadCount</p>
+    </div>
+
+
+    <form id="form1">
+        <p id="message"></p>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ingresá tu nombre">
+            <small class="form-text text-muted">Por ejemplo: Lucas</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Apellido</label>
+            <input type ="text" id="apellido" name="apellido" class="form-control" placeholder="Ingresá tu apellido">
+            <small class="form-text text-muted">Por ejemplo: Costamagna</small>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" type="button" onclick="saveData()">Guardar</button>
+            <button class="btn btn-dark" type="button" onclick="reloadPage()">Recargar Página</button>
+            <button class="btn btn-danger" type="button" onclick="clearCookies()">Elminar coockies</button>
+
+        </div>
+    </form>
+
+</body>
+</html>
